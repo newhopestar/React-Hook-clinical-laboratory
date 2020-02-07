@@ -1,0 +1,27 @@
+curl -v -X GET "https://api.saludmedica.io/pat-s/v1/patients?email=jane@smith.com" -H "smx-api-client: TEST" -H "smx-api-env: Testing" -H "smx-api-key: af2fec69509a4bd2bf4ef450ea42fd82"
+
+--data-ascii "{body}" 
+
+
+curl -v -X GET "https://api.saludmedica.io/lis-s/v1/providers/{npi}/orders?order-date=20200101&patient-id=123ABC&last-name=Smith&first-name=John&policy-id=800123456ABC"
+-H "smx-api-client: TEST"
+-H "smx-api-env: Testing"
+-H "smx-api-key: {subscription key}"
+
+--data-ascii "{body}" 
+
+
+
+curl -v -X GET "https://api.saludmedica.io/lis-s/v1/providers/1497721443/orders/200112" -H "smx-api-client: STXLABSTAGING" -H "smx-api-env: Staging" -H "smx-api-key: a91d62cf50a749ff9915a835d11632e6"
+
+
+curl -v -X GET "https://api.saludmedica.io/lis-s/v1/providers/1497721443/orders" -H "smx-api-client: TEST" -H "smx-api-env: Testing" -H "smx-api-key: a91d62cf50a749ff9915a835d11632e6"
+
+
+√ 1) The result column has a PDF as base64. I need the PDF to open when the user clicks the icon
+√ 2) Anytime I reload the page, I am taken back to the login screen even though I should be signed in.
+√ 3) Highlight the selected row on the left
+√ *) also, the right side column maintains the data after a search. the right side should reset whenever the data on the left changes
+*) ./src/containers/OrderDetails.js
+Line 40:6: React Hook useEffect has a missing dependency: 'order'. Either include it or remove the dependency array ./src/containers/OrderDetails.js
+Line 40:6: React Hook useEffect has a missing dependency: 'order'. Either include it or remove the dependency array
